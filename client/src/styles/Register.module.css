@@ -1,0 +1,143 @@
+.main {
+    height: 100vh;
+    background-color: rgb(193, 190, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font);
+}
+
+.card {
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: white;
+    border-radius: 10px;
+    max-height: calc(100vh - 100px);
+    overflow: hidden;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+.card::-webkit-scrollbar {
+    display: none;
+}
+
+.left {
+    flex: 1;
+    background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
+        url("https://cdn.pixabay.com/photo/2017/11/06/08/42/personal-2923048_960_720.jpg") center right;
+    background-size: cover;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+    /* height: calc(100vh - 100px); */
+}
+
+.left>h1 {
+    font-size: 7vmin;
+    /* line-height: 100px; */
+}
+
+.left>span {
+    font-size: 50px;
+    /* line-height: 100px; */
+}
+
+.left>a>button {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    background-color: white;
+    color: rebeccapurple;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50px;
+    transition: 0.5s linear;
+}
+
+.left>a>button:hover {
+    background-color: rebeccapurple;
+    color: white;
+    transform: rotateX(360deg);
+    transition: 0.5s ease-in-out;
+}
+
+.right {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* gap: 0px; */
+    justify-content: center;
+    /* height: calc(100vh - 100px); */
+}
+
+.right>h1 {
+    color: #555;
+}
+
+.right>form {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 30px;
+}
+
+.right>form>input {
+    border: none;
+    border-bottom: 1px solid lightgray;
+    padding: 20px 10px;
+}
+
+.right>form>.button {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    background-color: #938eef;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.right>form>.button:hover {
+    background-color: rebeccapurple;
+    color: white;
+    font-weight: bold;
+}
+.right>form>.button:disabled
+{
+    background-color: #555;
+}
+@media screen and (max-width : 700px) {
+    .main {
+        height: 100vh;
+        background-color: rgb(193, 190, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font);
+    }
+
+    .card {
+        border-radius: 0px;
+        width: 100vw;
+        max-height: 100vh;
+    }
+
+    .right>form {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        /* justify-content: center; */
+        gap: 30px;
+    }
+
+}
